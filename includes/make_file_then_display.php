@@ -5,12 +5,11 @@ $details = get_project_details($link, $lastid);
 
 ?>
 
-<div>
-	<p>Project Name: <?php print $details['title']; ?></p>
-    <p>Created by: <?php print $details['user_name']; ?></p>
-    <p>Created on: <?php print fix_date($details['mod_date']); ?></p>
-    <p>File Link: <?php print SNIPPET_DIR . $details['file_link']; ?></p>
-    <p><a href="<?php print SNIPPET_DIR . $details['file_link']; ?>">download file</a></p>
-</div>
+<p><strong>Project Name:</strong> <?php print $details['title']; ?></p>
+<p><strong>Created by:</strong> <?php print $details['user_name']; ?></p>
+<p><strong>Created on:</strong> <?php print fix_date($details['mod_date']); ?></p>
+<p><strong>File Link:</strong> <?php print SNIPPET_DIR . $details['file_link']; ?></p>
+<p><a href="<?php print SNIPPET_DIR . $details['file_link']; ?>">download file</a></p>
 
+<h2>Generated File...</h2>
 <iframe src="<?php print SNIPPET_DIR . $details['file_link']; ?>" id="idIframe" style="width:100%"></iframe>

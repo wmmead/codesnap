@@ -3,7 +3,7 @@
             <label for="pagetitle">Project Title</label>
             <input type="text" name="projecttitle" id="pagetitle">
             
-            <label for="tags">Tags (separate multiple tags with commas)</label>
+            <label for="tags">Tags <span>(separate multiple tags with commas)</span></label>
             <input type="text" name="tags" id="tags">
             
             <fieldset class="codesnippet" id="snippet1">
@@ -20,7 +20,7 @@
                 <label><input type="radio" name="lang1" id="css1" value="1"> CSS</label>
                 
                 <div class="codecontainer">
-                    <label for="code1" id="codelabel1">Code Text</label>
+                    <label for="code1" id="codelabel1">Add Your Code Snippet Below</label>
                     <textarea id="code1" name="code1" cols="70" rows="20"></textarea>
                 </div>
             
