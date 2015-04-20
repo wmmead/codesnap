@@ -21,7 +21,7 @@
                 
                 <div class="codecontainer">
                     <label for="code1" id="codelabel1">Add Your Code Snippet Below</label>
-                    <textarea id="code1" name="code1" cols="70" rows="20"></textarea>
+                    <textarea id="code1" name="code1" cols="70" rows="20" spellcheck="false"></textarea>
                 </div>
             
             </fieldset>

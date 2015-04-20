@@ -78,6 +78,7 @@ body {
 
 #loginform label {
 	display:block;
+	width:90%;
 }
 
 #loginform input[type="text"], #loginform input[type="password"] {
@@ -86,9 +87,14 @@ body {
 	padding:10px;
 	margin-bottom:20px;
 	width:90%;
+	font-size:16px;
 }
 
 /******************** Form Elements *******************/
+
+textarea:focus, input:focus{
+    outline: 0;
+}
 
 label {
 	display:block;
