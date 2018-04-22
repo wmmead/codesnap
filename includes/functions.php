@@ -34,7 +34,7 @@ function add_project($link)
 		
 		if( $title != '')
 		{
-			$query = "insert into projects values('', '1', '$title', NOW(), NOW(), '0', 'temp')";
+			$query = "insert into projects values( NULL, '1', '$title', NOW(), NOW(), '0', 'temp')";
 			mysqli_query($link, $query);
 			$lastid = mysqli_insert_id($link);
 			
@@ -64,7 +64,7 @@ function add_project_tags($link, $tags, $lastid)
 	
 		foreach($trimmed_tags as $each_tag)
 		{
-			$query = "insert into tags values('', '$lastid', '$each_tag')";
+			$query = "insert into tags values( NULL, '$lastid', '$each_tag')";
 			mysqli_query($link, $query);
 		}
 	}
@@ -87,7 +87,7 @@ function add_project_snippets($link, $lastid)
 		
 		if($code != '')
 		{
-			$query = "insert into snippets values('', '$lastid', '$ordr', '$intro', '$caption', '$lang', '$code')";
+			$query = "insert into snippets values(NULL, '$lastid', '$ordr', '$intro', '$caption', '$lang', '$code')";
 			mysqli_query($link, $query);
 			$ordr++;
 		}
@@ -159,7 +159,7 @@ function write_file($lastid, $title)
 	$piece = file_get_contents("includes/pieces/part1.html");
 	$piece2 = file_get_contents("includes/pieces/part2.html");
 	$piece3 = file_get_contents("includes/pieces/part3.html");
-	$piece4 = file_get_contents("includes/pieces/part4.html");
+	//$piece4 = file_get_contents("includes/pieces/part4.html");
 	$piece9 = file_get_contents("includes/pieces/part9.html");
 	
 	$filename = seoURL($title);
@@ -179,7 +179,7 @@ function write_file($lastid, $title)
 		
 		fwrite($handle, $piece3);
 		
-		fwrite($handle, "</h4>");
+		//fwrite($handle, "</h4>");
 		
 		output_codesnippets($handle);
 		
